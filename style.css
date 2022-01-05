@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+#container{
+
+    display:flex;
+    width: 960px;
+    height: 960px;
+}
+.gridRow{
+  display: flex;
+  flex-wrap:wrap;
+  flex-basis: 100%;
+
+  
+}
+.cell {
+  border:1px solid black;
+  flex-basis: 100%;
+}
+
+
