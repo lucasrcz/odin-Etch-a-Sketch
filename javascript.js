@@ -1,20 +1,55 @@
+//UI
 const container = document.getElementById('container');
 let rows = document.getElementsByClassName('gridRow');
 let cells = document.getElementsByClassName('cell');
+const reset = document.querySelector('#reset') 
+const eraser = document.querySelector('#eraser') 
+const rainbow = document.querySelector('#rainbow')
 
+//Setamos o default da página para 16x16 e aplicamos o hoover
+chooseGrid(16)
+applyHover('black')
 
-
-chooseGrid()
-
-let cell= document.querySelectorAll('.cell') //Chama uma lista estática de node da classe .cell para trabalhar com ForEach 
-cell.forEach(function(cellHover){ // Aplica a função de EventListener com o forEach para cada elemento da classe .cell
-cellHover.addEventListener('mouseover', function(e){ // Adiciona um eventlistener para cada cell da grid
-cellHover.style.backgroundColor = 'black'
-});
+rainbow.addEventListener('click', function(){
+    let arrRainbow = ['#7734EA','#00A7EA','#8AE800','#FAF100','#FFAA00',' #FF0061']
+    for(let i = 0 ; i<arrRainbow.length ; i++){
+    let randomColor = Math.floor(Math.random()*6);
+    let color = arrRainbow[randomColor];
+    console.log(color);
+    applyHover(color)}
 })
-function chooseGrid(){
-    createRows(64)
-    createColumn(64)
+eraser.addEventListener('click', function(){ 
+    applyHover('white')
+})
+reset.addEventListener('click', function(){ // Botão de reset funcao de click
+    empty(container) // chama a função para remover todos os filhos do container para um novo grid seja lancado
+    anwser = prompt('Choose a new dimension for the grid(max:100):',)
+    Number(anwser)
+    if(anwser>100){
+        empty(container)
+        anwser = prompt('Enter a valid dimension:',)
+        Number(anwser)   
+    }
+    chooseGrid(anwser) 
+    applyHover()
+    
+})
+function applyHover(color){ //Com essa função reaplicamos o hover quando quisermos
+    cell= document.querySelectorAll('.cell') 
+    cell.forEach(function hoverEffect(cell){
+        cell.addEventListener('mouseover', function(e){ 
+        cell.style.backgroundColor = ""+color
+        });
+    })
+}
+function empty(element) {
+    while(element.firstElementChild) {
+       element.firstElementChild.remove();
+    }
+}
+function chooseGrid(dimesion){
+    createRows(dimesion)
+    createColumn(dimesion)
 }
 
 function createRows(rowNum){

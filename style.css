@@ -1,11 +1,21 @@
 body{
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;  
+  text-align: center;
+  align-items: center;
+  background-color: #809bce;
+  color: #ffee93;
+
+ 
 }
 #container{
-
+    padding: 5px;
+    border: 10px solid #eac4d5;
     display:flex;
     width: 960px;
     height: 960px;
+    background-color: white;
 }
 .gridRow{
   display: flex;
