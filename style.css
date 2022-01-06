@@ -1,18 +1,37 @@
 body{
   display: flex;
   flex-direction: column;
-  margin: 0;  
+  margin: 0; 
   text-align: center;
-  align-items: center;
   background-color: #809bce;
   color: #ffee93;
+  font-size: 40px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 42px;
 
- 
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+button:hover{
+  background-color: blueviolet;
+}
+button{
+  border-radius: 4px;
+  font-size: 32px;
+  background-color: #ffee93;
 }
 #container{
     padding: 5px;
     border: 10px solid #eac4d5;
     display:flex;
+    margin-left: 920px;
     width: 960px;
     height: 960px;
     background-color: white;
@@ -29,4 +48,45 @@ body{
   flex-basis: 100%;
 }
 
+#rainbow:hover{
+  background-image:     linear-gradient(
+     to right, 
+     #E7484F,
+     #E7484F 16.65%,
+     #F68B1D 16.65%,
+     #F68B1D 33.3%,
+     #FCED00 33.3%,
+     #FCED00 49.95%,
+     #009E4F 49.95%,
+     #009E4F 66.6%,
+     #00AAC3 66.6%,
+     #00AAC3 83.25%,
+     #732982 83.25%,
+     #732982 100%,
+     #E7484F 100%);
+ animation:slidebg 2s linear infinite;
+}
 
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+.footer{
+  margin-top: 32px;
+  font-size: 20px;
+  display: flex;
+  background-color: #c1d3fe;
+  color: black;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 4px;
+
+}
+
+.git{
+  width: 30px;
+}
+  
