@@ -8,8 +8,10 @@ body{
   font-size: 40px;
   font-family: 'Nunito', sans-serif;
   font-size: 42px;
-
+  min-height: 100vh;
+  flex: 1;
 }
+
 
 .buttonContainer{
   display: flex;
@@ -31,10 +33,11 @@ button{
     padding: 5px;
     border: 10px solid #eac4d5;
     display:flex;
-    margin-left: 920px;
-    width: 960px;
-    height: 960px;
+    width: 660px;
+    height: 660px;
     background-color: white;
+    margin-bottom: 32px;
+    align-self: center;
 }
 .gridRow{
   display: flex;
@@ -74,16 +77,13 @@ button{
 }
 
 .footer{
-  margin-top: 32px;
-  font-size: 20px;
   display: flex;
-  background-color: #c1d3fe;
-  color: black;
+  background-color: #454f5d4f;
+  color: #F9FAF8;
   justify-content: center;
-  align-content: center;
   align-items: center;
-  border-radius: 4px;
-
+  padding: 4px;
+  font-size: 20px;
 }
 
 .git{
