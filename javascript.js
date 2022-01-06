@@ -28,11 +28,11 @@ eraser.addEventListener('click', function(){
 })
 reset.addEventListener('click', function(){ // Botão de reset funcao de click
     empty(container) // chama a função para remover todos os filhos do container para um novo grid seja lancado
-    anwser = prompt('Choose a new dimension for the grid(max:100):',)
+    anwser = prompt('Choose a new dimension for the grid(max:64):',)
     Number(anwser)
-    while(anwser>100){
+    while(anwser>64){
         empty(container)
-        anwser = prompt('Enter a valid dimension:',)
+        anwser = prompt('Enter a valid dimension(max:64):',)
         Number(anwser)   
     }
     chooseGrid(anwser) 
